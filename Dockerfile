@@ -4,7 +4,8 @@ WORKDIR /app
 
 COPY . /app
 
-RUN pip install -e .
+# 安装项目依赖和 uv
+RUN pip install --no-cache-dir -e . uv
 
 EXPOSE 8080
 
